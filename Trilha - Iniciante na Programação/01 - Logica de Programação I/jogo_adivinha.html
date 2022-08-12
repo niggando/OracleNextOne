@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random()*10);
+    for(i=3; i>=1; i--){
+        var chute = parseInt(prompt("Digite seu chute entre 0 e 10"));
+        alert("Número de Tentativas restantes "+i);
+
+        if(chute > numeroPensado && chute < 10){
+            alert("Vish rapaz, seu chute foi maior.");
+        }
+        if(chute < numeroPensado){
+            alert("Vish rapaz, seu chute foi menor.");
+        }
+        if (chute == numeroPensado){
+            mostra("Pois então ne que você acertou?");
+            break;
+        }
+        if(chute > 10){
+        alert("Oxe, tu digitou um numero válido?");
+        }
+        if(i==1){
+            alert('Acabaram suas chances, você perdeu!');
+            mostra("O número pensado foi "+numeroPensado);
+            break;
+        }
+    }
+
+</script>
